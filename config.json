@@ -1,0 +1,10 @@
+{
+  "_demo_notice": "DEMO ONLY. Every value in this file is fake. It exists to show HefestoAI rule J001 failing the PR check.",
+  "service_name": "hefesto-action-demo",
+  "aws_access_key_id": "AKIAEXAMPLE-NOT-A-REAL-KEY",
+  "database": {
+    "host": "localhost",
+    "user": "demo",
+    "password": "not-a-real-secret"
+  }
+}
