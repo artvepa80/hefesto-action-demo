@@ -1,0 +1,23 @@
+name: HefestoAI gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write # upload the SARIF file to Security > Code scanning
+
+jobs:
+  hefesto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      # @v4 is the floating major tag: today it resolves to v4.20.1.
+      - uses: artvepa80/Agents-Hefesto@v4
+        with:
+          target: '.'
+          fail_on: 'CRITICAL'
+          format: 'json' # the log shows each finding with its rule_id (e.g. J001)
+          sarif: 'true'  # findings also appear as PR annotations and in code scanning

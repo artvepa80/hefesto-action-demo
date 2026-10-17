@@ -1,0 +1,5 @@
+{
+  "service_name": "hefesto-action-demo",
+  "log_level": "info",
+  "api_base_url_env": "DEMO_API_BASE_URL"
+}
